@@ -1,0 +1,16 @@
+=== separate stdout and stderr ===
+--- stdout.txt ---
+/tmp:
+snap-private-tmp
+systemd-private-121328f8fefa45ada81f0f9878c9b3bd-chrony.service-19VYwf
+systemd-private-121328f8fefa45ada81f0f9878c9b3bd-systemd-logind.service-iA0uKS
+
+--- stderr.txt ---
+ls: cannot access '/definitely-not-exist': No such file or directory
+
+=== merged stdout and stderr ===
+ls: cannot access '/definitely-not-exist': No such file or directory
+/tmp:
+snap-private-tmp
+systemd-private-121328f8fefa45ada81f0f9878c9b3bd-chrony.service-19VYwf
+systemd-private-121328f8fefa45ada81f0f9878c9b3bd-systemd-logind.service-iA0uKS
