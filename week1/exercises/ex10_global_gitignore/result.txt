@@ -1,0 +1,21 @@
+=== global excludes file ===
+/home/jk/.gitignore_global
+
+=== ignore rules ===
+*.swp
+*~
+.DS_Store
+Thumbs.db
+
+=== ignored files ===
+/home/jk/.gitignore_global:1:*.swp	week1/exercises/ex10_global_gitignore/test/demo.swp
+/home/jk/.gitignore_global:2:*~	week1/exercises/ex10_global_gitignore/test/backup~
+/home/jk/.gitignore_global:3:.DS_Store	week1/exercises/ex10_global_gitignore/test/.DS_Store
+
+=== git status ===
+?? week1/exercises/ex10_global_gitignore/global_gitignore.txt
+?? week1/exercises/ex10_global_gitignore/result.txt
+?? week1/exercises/ex10_global_gitignore/test/normal.txt
+!! week1/exercises/ex10_global_gitignore/test/.DS_Store
+!! week1/exercises/ex10_global_gitignore/test/backup~
+!! week1/exercises/ex10_global_gitignore/test/demo.swp
