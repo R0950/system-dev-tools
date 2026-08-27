@@ -1,0 +1,88 @@
+commit 2df6d8346aa765e5b28a136e025e7660f85f60d5
+Author: R0950 <3210945652@qq.com>
+Date:   Thu Aug 27 21:35:10 2026 +0800
+
+    Complete week1 exercise 07 pipeline statistics
+
+diff --git a/week1/exercises/ex07_pipeline_stats/extension_stats.sh b/week1/exercises/ex07_pipeline_stats/extension_stats.sh
+new file mode 100755
+index 0000000..ac3f570
+--- /dev/null
++++ b/week1/exercises/ex07_pipeline_stats/extension_stats.sh
+@@ -0,0 +1,14 @@
++#!/usr/bin/env bash
++
++echo "=== all sample files ==="
++find sample -type f | sort
++
++echo
++echo "=== top 5 file extensions ==="
++
++find sample -type f \
++| awk -F. 'NF>1 {print "." $NF}' \
++| sort \
++| uniq -c \
++| sort -nr \
++| head -5
+diff --git a/week1/exercises/ex07_pipeline_stats/result.txt b/week1/exercises/ex07_pipeline_stats/result.txt
+new file mode 100644
+index 0000000..52fc3c2
+--- /dev/null
++++ b/week1/exercises/ex07_pipeline_stats/result.txt
+@@ -0,0 +1,20 @@
++=== all sample files ===
++sample/LICENSE
++sample/data.csv
++sample/docs/a.txt
++sample/docs/b.txt
++sample/docs/c.txt
++sample/docs/note.md
++sample/docs/readme.md
++sample/scripts/run.sh
++sample/src/game.cpp
++sample/src/main.cpp
++sample/src/player.cpp
++sample/src/test.cpp
++
++=== top 5 file extensions ===
++      4 .cpp
++      3 .txt
++      2 .md
++      1 .sh
++      1 .csv
+diff --git a/week1/exercises/ex07_pipeline_stats/sample/LICENSE b/week1/exercises/ex07_pipeline_stats/sample/LICENSE
+new file mode 100644
+index 0000000..e69de29
+diff --git a/week1/exercises/ex07_pipeline_stats/sample/data.csv b/week1/exercises/ex07_pipeline_stats/sample/data.csv
+new file mode 100644
+index 0000000..e69de29
+diff --git a/week1/exercises/ex07_pipeline_stats/sample/docs/a.txt b/week1/exercises/ex07_pipeline_stats/sample/docs/a.txt
+new file mode 100644
+index 0000000..e69de29
+diff --git a/week1/exercises/ex07_pipeline_stats/sample/docs/b.txt b/week1/exercises/ex07_pipeline_stats/sample/docs/b.txt
+new file mode 100644
+index 0000000..e69de29
+diff --git a/week1/exercises/ex07_pipeline_stats/sample/docs/c.txt b/week1/exercises/ex07_pipeline_stats/sample/docs/c.txt
+new file mode 100644
+index 0000000..e69de29
+diff --git a/week1/exercises/ex07_pipeline_stats/sample/docs/note.md b/week1/exercises/ex07_pipeline_stats/sample/docs/note.md
+new file mode 100644
+index 0000000..e69de29
+diff --git a/week1/exercises/ex07_pipeline_stats/sample/docs/readme.md b/week1/exercises/ex07_pipeline_stats/sample/docs/readme.md
+new file mode 100644
+index 0000000..e69de29
+diff --git a/week1/exercises/ex07_pipeline_stats/sample/scripts/run.sh b/week1/exercises/ex07_pipeline_stats/sample/scripts/run.sh
+new file mode 100644
+index 0000000..e69de29
+diff --git a/week1/exercises/ex07_pipeline_stats/sample/src/game.cpp b/week1/exercises/ex07_pipeline_stats/sample/src/game.cpp
+new file mode 100644
+index 0000000..e69de29
+diff --git a/week1/exercises/ex07_pipeline_stats/sample/src/main.cpp b/week1/exercises/ex07_pipeline_stats/sample/src/main.cpp
+new file mode 100644
+index 0000000..e69de29
+diff --git a/week1/exercises/ex07_pipeline_stats/sample/src/player.cpp b/week1/exercises/ex07_pipeline_stats/sample/src/player.cpp
+new file mode 100644
+index 0000000..e69de29
+diff --git a/week1/exercises/ex07_pipeline_stats/sample/src/test.cpp b/week1/exercises/ex07_pipeline_stats/sample/src/test.cpp
+new file mode 100644
+index 0000000..e69de29
