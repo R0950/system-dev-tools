@@ -1,0 +1,20 @@
+=== all sample files ===
+sample/LICENSE
+sample/data.csv
+sample/docs/a.txt
+sample/docs/b.txt
+sample/docs/c.txt
+sample/docs/note.md
+sample/docs/readme.md
+sample/scripts/run.sh
+sample/src/game.cpp
+sample/src/main.cpp
+sample/src/player.cpp
+sample/src/test.cpp
+
+=== top 5 file extensions ===
+      4 .cpp
+      3 .txt
+      2 .md
+      1 .sh
+      1 .csv
