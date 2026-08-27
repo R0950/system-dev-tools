@@ -1,0 +1,7 @@
+=== existing file ===
+exists: test.txt
+exit code: 0
+
+=== missing file ===
+missing: missing.txt
+exit code: 1
