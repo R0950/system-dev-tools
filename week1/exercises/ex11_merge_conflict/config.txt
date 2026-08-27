@@ -1,1 +1,2 @@
-setting=debug
+setting=release
+note=conflict-resolved
