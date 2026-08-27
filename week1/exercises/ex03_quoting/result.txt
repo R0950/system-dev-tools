@@ -1,0 +1,22 @@
+=== single quotes ===
+$name
+
+=== double quotes ===
+hello world
+
+=== unquoted variable ===
+<hello>
+<world>
+
+=== double-quoted variable ===
+<hello world>
+
+=== ANSI-C quotes ===
+first line
+second line	TAB
+
+=== escape comparison ===
+hello\nworld
+hello\nworld
+hello
+world
