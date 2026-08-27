@@ -1,0 +1,26 @@
+*   707795f (HEAD -> main) ex11: resolve merge conflict
+|\  
+| * 637c929 (ex11-release) ex11: set release mode
+* |   99e6ee0 ex11: merge debug branch
+|\ \  
+| |/  
+|/|   
+| * 5f51b79 (ex11-debug) ex11: set debug mode
+|/  
+* 8367a59 ex11: add base config
+* d8f6304 (origin/main) Complete week1 exercise 10 global gitignore
+* 27181de Remove accidental exercise 08 file
+* 1bab940 Complete week1 exercise 09 git graph alias
+* b9a7a95 Complete week1 exercise 08 git history analysis
+* 2df6d83 Complete week1 exercise 07 pipeline statistics
+* 0750159 Complete week1 exercise 06 file check script
+* 75b8f72 Complete week1 exercise 05 exit status
+* be98153 Complete week1 exercise 04 stdout stderr redirection
+* 84ab697 Add exercise 03 output
+* 637c88c Complete week1 exercise 03 shell quoting
+* 4130bcf Complete week1 exercise 02 glob patterns
+* e591c70 Complete week1 exercise 01 ls permissions
+* 7d99b8b Complete week1 q04 LaTeX document build
+*   5bc4aae q03: Resolve merge conflict
+|\  
+| * 818020d (origin/feature-b, feature-b) q03: Set fast mode
