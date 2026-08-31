@@ -1,0 +1,9 @@
+slow run 1: 0.0980 s
+slow run 2: 0.1010 s
+slow median: 0.0995 s
+
+fast run 1: 0.0100 s
+fast run 2: 0.0100 s
+fast median: 0.0100 s
+
+speedup: 9.95x
