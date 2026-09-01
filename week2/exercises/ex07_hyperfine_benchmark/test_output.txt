@@ -1,0 +1,26 @@
+===== Re-run benchmark =====
+
+===== Check benchmark data =====
+PASS: benchmark dataset exists
+dataset lines = 600000
+PASS: dataset contains 600000 lines
+
+===== Check grep =====
+grep count = 30000
+PASS: grep produced expected result
+
+===== Check ripgrep =====
+ripgrep count = 30000
+PASS: ripgrep produced expected result
+
+===== Compare results =====
+PASS: both implementations are equivalent
+
+===== Check Hyperfine JSON =====
+PASS: benchmark_result.json generated
+PASS: JSON contains two valid benchmark results
+
+===== Check summary =====
+PASS: benchmark summary generated
+
+All Hyperfine tests passed.

@@ -1,0 +1,11 @@
+hyperfine:
+hyperfine 1.19.0
+
+grep:
+grep (GNU grep) 3.12
+
+ripgrep:
+ripgrep 15.1.0
+
+python:
+Python 3.14.4

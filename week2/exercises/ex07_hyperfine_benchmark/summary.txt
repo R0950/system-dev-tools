@@ -1,0 +1,10 @@
+Hyperfine Benchmark Summary
+===========================
+
+grep mean: 0.000688 s
+grep median: 0.000685 s
+ripgrep mean: 0.005621 s
+ripgrep median: 0.005609 s
+
+Faster command: grep
+Approximate speed ratio: 8.17x

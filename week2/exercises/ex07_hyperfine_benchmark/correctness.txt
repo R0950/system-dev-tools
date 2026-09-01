@@ -1,0 +1,4 @@
+Expected ERROR count: 30000
+grep count: 30000
+ripgrep count: 30000
+Result: identical

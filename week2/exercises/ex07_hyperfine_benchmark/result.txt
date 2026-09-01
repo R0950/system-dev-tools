@@ -1,0 +1,87 @@
+Exercise 07: Benchmarking grep and ripgrep with Hyperfine
+
+Source:
+Missing Semester 2026
+Debugging and Profiling
+Profiling - Benchmarking
+
+Goal:
+Use hyperfine to benchmark two command-line implementations of the same
+task.
+
+Task:
+Count the number of lines beginning with ERROR in a deterministic log file.
+
+Dataset:
+600000 lines are generated.
+Every twentieth line begins with ERROR.
+Therefore the expected number of matches is 30000.
+
+Implementations:
+
+grep:
+grep -c '^ERROR' /tmp/ex07_benchmark.log
+
+ripgrep:
+rg -c '^ERROR' /tmp/ex07_benchmark.log
+
+Benchmark command:
+
+hyperfine \
+    --warmup 2 \
+    --runs 8 \
+    "grep -c '^ERROR' /tmp/ex07_benchmark.log" \
+    "rg -c '^ERROR' /tmp/ex07_benchmark.log"
+
+Important options:
+
+--warmup 2
+Run each command twice before measurement to reduce cold-start effects.
+
+--runs 8
+Measure each command eight times.
+
+--export-json
+Save raw benchmark measurements in machine-readable JSON format.
+
+Important metrics:
+
+Mean:
+Average execution time over all measured runs.
+
+Median:
+Middle execution time after sorting measured values.
+
+Minimum:
+Fastest measured run.
+
+Maximum:
+Slowest measured run.
+
+Standard deviation:
+Describes variation between repeated measurements.
+
+Observations:
+
+1. grep and ripgrep were tested on exactly the same input.
+
+2. Both commands returned the expected result of 30000 matching lines.
+
+3. Correctness was checked before comparing performance.
+
+4. Hyperfine repeated each benchmark multiple times rather than relying on
+   a single timing measurement.
+
+5. Warmup runs were used before the measured runs.
+
+6. Results were exported to JSON for reproducible analysis.
+
+7. The faster command is determined from the actual measurements on the
+   current machine rather than assumed in advance.
+
+Conclusion:
+
+Hyperfine is useful for statistically comparing command-line programs.
+A meaningful benchmark should use equivalent workloads, verify correctness,
+perform repeated measurements, and report timing statistics rather than
+drawing conclusions from a single run.
