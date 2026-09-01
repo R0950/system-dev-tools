@@ -1,0 +1,16 @@
+Exercise 01: Special argument -- and filenames beginning with "-"
+
+1. Created a file whose name begins with "-":
+   touch -- -myfile
+
+2. Direct deletion failed:
+   rm -myfile
+   Because "-myfile" was interpreted as command-line options.
+
+3. Deleted the file without using "--":
+   rm ./-myfile
+
+Conclusion:
+"--" marks the end of command-line option parsing.
+Using "./-myfile" makes the argument an explicit relative path,
+so the leading "-" is no longer interpreted as an option.
