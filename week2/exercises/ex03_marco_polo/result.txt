@@ -1,0 +1,35 @@
+Exercise 03: Marco and Polo Shell Functions
+
+Goal:
+Create two Bash functions named marco and polo.
+
+Behavior:
+- marco saves the current working directory.
+- polo changes the current working directory back to the directory saved by marco.
+
+Usage:
+source ./marco.sh
+marco
+cd /tmp
+polo
+
+Implementation:
+marco saves the current directory using the Bash PWD variable.
+polo uses cd to return to the saved directory.
+
+Important concepts:
+1. source executes the script inside the current shell.
+2. Shell functions loaded with source remain available in the current terminal.
+3. PWD stores the current working directory.
+4. return is used to return a status code from a shell function.
+5. [[ -z "$MARCO_DIR" ]] checks whether the saved variable is empty.
+6. [[ -d "$MARCO_DIR" ]] checks whether the saved directory still exists.
+7. Quoting "$MARCO_DIR" safely handles paths containing spaces.
+
+Error handling:
+polo returns status 1 if no directory has been saved or if the saved
+directory no longer exists.
+
+Conclusion:
+This exercise demonstrates shell functions, current-shell state,
+environment variables, source, directory state management, and return codes.

@@ -1,0 +1,25 @@
+===== Initial directory =====
+/home/jk/system-dev-tools/week2/exercises/ex03_marco_polo
+
+===== Save directory =====
+Saved directory: /home/jk/system-dev-tools/week2/exercises/ex03_marco_polo
+
+===== Move to /tmp =====
+/tmp
+
+===== Return using polo =====
+Returned to: /home/jk/system-dev-tools/week2/exercises/ex03_marco_polo
+
+===== Verify directory =====
+PASS: polo returned to the saved directory
+
+===== Test missing saved directory =====
+Error: no directory has been saved. Run marco first.
+PASS: missing saved directory was detected
+
+===== Test update saved directory =====
+Saved directory: /tmp
+Returned to: /tmp
+PASS: marco updated the saved directory
+
+All tests passed.
