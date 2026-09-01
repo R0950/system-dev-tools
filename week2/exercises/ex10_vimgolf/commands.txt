@@ -1,0 +1,77 @@
+Exercise 10 Vim Commands
+
+Normal mode:
+ESC
+
+Return to Vim normal mode.
+
+
+Insert mode:
+i
+
+Insert text before the cursor.
+
+
+Append:
+A
+
+Append text at the end of the current line.
+
+
+Delete word:
+dw
+
+
+Change word:
+cw
+
+
+Undo:
+u
+
+
+Redo:
+Ctrl-r
+
+
+Move by word:
+w
+b
+e
+
+
+Beginning/end of line:
+0
+$
+
+
+File beginning/end:
+gg
+G
+
+
+Search:
+/
+n
+N
+
+
+Command-line mode:
+:
+
+
+Substitution used by this challenge:
+
+:%s/\S\zs$/;/
+
+
+Save:
+:w
+
+
+Quit:
+:q
+
+
+Save and quit:
+:wq

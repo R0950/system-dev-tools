@@ -1,0 +1,9 @@
+Vim version:
+VIM - Vi IMproved 9.1 (2024 Jan 02, compiled Aug 18 2026 18:55:02)
+Included patches: 1-948, 950-2141
+Modified by team+vim@tracker.debian.org
+Compiled by team+vim@tracker.debian.org
+Huge version without GUI.  Features included (+) or not (-):
+
+Vim executable:
+/usr/bin/vim

@@ -1,0 +1,22 @@
+Exercise 10: VimGolf Challenge
+
+Missing Semester source:
+2026 Development Environment and Tools
+Exercise 2: Complete a VimGolf challenge.
+
+VimGolf challenge:
+Add semicolons
+
+Challenge ID:
+5cf62aa56c09760009d6b2f3
+
+Challenge goal:
+Add a semicolon at the end of every non-empty code line.
+
+VimGolf command for an authenticated VimGolf account:
+
+vimgolf put 5cf62aa56c09760009d6b2f3
+
+This exercise reproduces the official challenge locally and verifies the
+result automatically, so no VimGolf account or leaderboard submission is
+required for the local coursework evidence.

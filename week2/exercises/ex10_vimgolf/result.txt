@@ -1,0 +1,69 @@
+Exercise 10: VimGolf - Add Semicolons
+
+Source:
+Missing Semester 2026
+Development Environment and Tools
+Exercise 2: Complete a VimGolf challenge.
+
+VimGolf Challenge:
+Add semicolons
+
+Challenge ID:
+5cf62aa56c09760009d6b2f3
+
+Goal:
+Add a semicolon to the end of every non-empty code line while preserving
+the blank line.
+
+Vim command used:
+
+:%s/\S\zs$/;/
+
+The file was then saved and Vim was exited with:
+
+:wq
+
+Explanation:
+
+Vim is a modal editor. The colon enters command-line mode.
+
+The percent sign applies the substitution to every line.
+
+The regular expression \S matches a non-whitespace character.
+
+The \zs atom marks the start of the text that will actually be replaced.
+
+The dollar sign represents the end of the line.
+
+As a result, a semicolon is inserted only when a non-whitespace character
+exists before the end of the line.
+
+The blank line is therefore preserved.
+
+Experiment:
+
+1. The VimGolf start file was reproduced locally.
+
+2. The expected target file was reproduced locally.
+
+3. Vim was started without loading the user's Vim configuration.
+
+4. The transformation was performed by Vim.
+
+5. cmp verified the result byte-for-byte.
+
+6. The blank line remained unchanged.
+
+7. Exactly six semicolons were present in the solved file.
+
+8. Every non-empty line ended with a semicolon.
+
+9. The final EOF structure matched the challenge.
+
+Conclusion:
+
+Vim commands can be composed as a text-editing language. Rather than
+moving the cursor to each line and manually typing a semicolon, one
+command can describe the entire transformation. This demonstrates the
+editing model emphasized in the Missing Semester development environment
+lecture and in VimGolf.

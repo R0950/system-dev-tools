@@ -1,0 +1,18 @@
+--- challenge_start.txt	2026-09-01 22:31:51.555913759 +0800
++++ challenge_expected.txt	2026-09-01 22:31:51.570170965 +0800
+@@ -1,7 +1,7 @@
+-super.onCreate(savedInstanceState)
+-setContentView(R.layout.activity_second)
+-Intent intent = getIntent()
+-String text = intent.getStringExtra("text")
++super.onCreate(savedInstanceState);
++setContentView(R.layout.activity_second);
++Intent intent = getIntent();
++String text = intent.getStringExtra("text");
+ 
+-TextView view = findViewById(R.id.textView2)
+-view.setText(text)
+\ No newline at end of file
++TextView view = findViewById(R.id.textView2);
++view.setText(text);
+\ No newline at end of file

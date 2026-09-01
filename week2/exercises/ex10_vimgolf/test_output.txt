@@ -1,0 +1,22 @@
+===== Prepare challenge =====
+
+===== Check initial file =====
+PASS: initial file is unsolved
+
+===== Execute Vim =====
+PASS: Vim command executed
+
+===== Compare target =====
+PASS: Vim output matches VimGolf target
+
+===== Check blank line =====
+PASS: blank line preserved
+
+===== Check semicolons =====
+semicolon count = 6
+PASS: correct number of semicolons
+
+===== Check EOF =====
+PASS: EOF matches challenge
+
+All VimGolf tests passed.

@@ -1,0 +1,40 @@
+VimGolf solution used in this exercise:
+
+:%s/\S\zs$/;/<CR>
+:wq<CR>
+
+Explanation:
+
+:
+    Enter Vim command-line mode.
+
+%
+    Apply the following command to the entire file.
+
+s
+    Perform substitution.
+
+\S
+    Match a non-whitespace character.
+
+\zs
+    Set the start of the replacement region.
+
+$
+    Match the end of the current line.
+
+;
+    Insert a semicolon at that position.
+
+<CR>
+    Press Enter.
+
+:wq
+    Write the edited file and quit Vim.
+
+Why not use:
+
+:%s/$/;/
+
+Because that command would also add a semicolon to the blank line.
+The official VimGolf target keeps the blank line unchanged.
