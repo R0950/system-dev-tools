@@ -1,0 +1,18 @@
+Exercise 11: Aliases and Dotfiles
+
+Source:
+Missing Semester 2026
+Command-line Environment
+Aliases and Dotfiles exercises
+
+Official exercise concepts used:
+
+1. Create an alias named dc so mistyping cd still works.
+
+2. Create a directory for dotfiles and keep it under version control.
+
+3. Add configuration for at least one program, such as the shell.
+
+4. Create a method for quickly installing the dotfiles on a new machine.
+
+5. A simple installer may create symbolic links with ln -s.

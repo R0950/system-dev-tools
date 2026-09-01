@@ -1,0 +1,92 @@
+Exercise 11: Aliases and Dotfiles
+
+Source:
+Missing Semester 2026
+Command-line Environment
+Aliases and Dotfiles
+
+Goal:
+
+Create useful shell aliases, store shell configuration as a dotfile and
+build an automatic installation method using symbolic links.
+
+
+Alias:
+
+alias dc='cd'
+
+This allows dc to behave exactly like cd, which is the alias requested by
+the Missing Semester exercise.
+
+
+Additional aliases:
+
+alias ll='ls -lah'
+
+alias gs='git status'
+
+
+Shell customization:
+
+EDITOR was configured as vim.
+
+PS1 was customized to demonstrate that shell behavior can be controlled
+through a dotfile.
+
+
+Dotfiles directory:
+
+dotfiles/bashrc
+
+The directory is stored inside the Git coursework repository, so its
+configuration and later changes are version controlled.
+
+
+Installation:
+
+install.sh TARGET_HOME
+
+The installer creates:
+
+TARGET_HOME/.bashrc
+
+as a symbolic link to:
+
+dotfiles/bashrc
+
+
+The installer also backs up a pre-existing ordinary .bashrc file before
+creating the link.
+
+
+Testing:
+
+A temporary HOME directory was used instead of the real user HOME.
+
+This prevented the experiment from modifying the actual ~/.bashrc.
+
+The installer was tested twice to verify repeatability.
+
+A second empty HOME directory simulated installation on a fresh machine.
+
+An isolated interactive Bash shell loaded the installed configuration.
+
+The dc alias was verified by changing the current directory from / to
+/tmp.
+
+The custom aliases, EDITOR variable and PS1 prompt were also verified.
+
+
+Key concept:
+
+Dotfiles are plain-text configuration files, often named with a leading
+dot. Keeping them under version control and installing them through
+symbolic links makes configuration portable and reproducible.
+
+
+Conclusion:
+
+Aliases reduce repetitive typing, while version-controlled dotfiles make
+the command-line environment reproducible across machines. A small
+installation script can restore a preferred shell configuration quickly
+without manually copying each configuration file.

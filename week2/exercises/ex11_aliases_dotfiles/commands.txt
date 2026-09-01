@@ -1,0 +1,61 @@
+Exercise 11 Important Commands
+
+
+Alias:
+
+alias dc='cd'
+
+Creates an alternative command name.
+
+
+Display an alias:
+
+alias dc
+
+
+Remove an alias:
+
+unalias dc
+
+
+Symbolic link:
+
+ln -s SOURCE TARGET
+
+
+Force/update symbolic link:
+
+ln -sfn SOURCE TARGET
+
+
+Check symbolic link:
+
+ls -l FILE
+
+
+Resolve symbolic link:
+
+realpath FILE
+
+
+Load Bash configuration:
+
+source ~/.bashrc
+
+
+Typical dotfiles:
+
+~/.bashrc
+~/.vimrc
+~/.gitconfig
+~/.tmux.conf
+~/.config/
+
+
+Why version-control dotfiles?
+
+- configuration history
+- synchronization
+- portability
+- reproducible setup
+- easier installation on a new machine

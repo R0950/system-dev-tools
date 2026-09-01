@@ -1,0 +1,21 @@
+===== Install dotfiles =====
+
+===== Check symlink =====
+PASS: .bashrc symlink created
+PASS: symlink points to correct dotfile
+
+===== Check dc alias =====
+PASS: dc alias works
+
+===== Check aliases =====
+PASS: dc is defined as an alias
+PASS: ll alias defined
+
+===== Check customization =====
+PASS: EDITOR configuration exists
+PASS: PS1 customization exists
+
+===== Reinstall =====
+PASS: installation is repeatable
+
+All dotfiles tests passed.

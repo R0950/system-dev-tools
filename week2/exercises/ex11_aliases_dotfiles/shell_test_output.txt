@@ -1,0 +1,14 @@
+===== ALIASES =====
+alias dc='cd'
+alias ll='ls -lah'
+alias gs='git status'
+
+===== EDITOR =====
+EDITOR=vim
+
+===== PROMPT =====
+PS1=[ms-\u@\h \W]\$ 
+
+===== DC TEST =====
+before=/
+after=/tmp

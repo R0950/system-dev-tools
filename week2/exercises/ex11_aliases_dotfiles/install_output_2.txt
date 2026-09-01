@@ -1,0 +1,10 @@
+Dotfiles directory:
+/home/jk/system-dev-tools/week2/exercises/ex11_aliases_dotfiles/dotfiles
+
+Target home:
+/tmp/ex11_dotfiles_home
+
+Created symbolic link:
+lrwxrwxrwx 1 jk jk 79 Sep  1 22:49 /tmp/ex11_dotfiles_home/.bashrc -> /home/jk/system-dev-tools/week2/exercises/ex11_aliases_dotfiles/dotfiles/bashrc
+
+Installation complete.
