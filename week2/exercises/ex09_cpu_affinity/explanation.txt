@@ -1,0 +1,26 @@
+Missing Semester CPU Affinity Exercise
+
+Command:
+
+taskset --cpu-list 0,2 stress -c 3
+
+stress -c 3 creates three CPU-intensive workers.
+
+taskset restricts all of those workers to only these CPUs:
+
+0,2
+
+Therefore:
+
+Number of workers = 3
+Allowed logical CPUs = 2
+
+At most two workers can run simultaneously on two different CPUs.
+
+The third worker must share CPU time with one of the other workers.
+
+This demonstrates that the number of runnable processes is different
+from the number of CPUs available to those processes.
+
+CPU affinity controls where the Linux scheduler is allowed to execute
+a process.

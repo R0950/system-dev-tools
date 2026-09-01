@@ -1,0 +1,43 @@
+Exercise 09: CPU Affinity Profiling
+
+Source:
+Missing Semester 2026
+Debugging and Profiling - Profiling Exercise 4
+
+Core exercise command:
+
+taskset --cpu-list 0,2 stress -c 3
+
+Current test command:
+
+taskset --cpu-list 0,2 stress -c 3
+
+Goal:
+
+Use stress, taskset and htop to understand CPU usage and CPU affinity.
+
+Results:
+
+- Three CPU-intensive workers were created.
+- All workers were restricted to two logical CPUs.
+- taskset -pc confirmed the CPU affinity.
+- ps PSR values showed the CPUs on which workers executed.
+- top and htop were used to monitor CPU usage.
+
+Why doesn't stress use three CPUs?
+
+stress creates three worker processes, but taskset permits those workers
+to execute on only two logical CPUs.
+
+Consequently, the three workers compete for CPU time on two CPUs.
+
+At most two workers can execute simultaneously on separate allowed CPUs.
+
+This illustrates the difference between the number of runnable processes
+and the number of processors included in a CPU affinity mask.
+
+Conclusion:
+
+CPU affinity restricts where Linux may schedule a process. Resource
+monitoring tools such as htop, top and ps make CPU scheduling behavior
+observable.

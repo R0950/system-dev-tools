@@ -1,0 +1,11 @@
+stress:
+stress 1.0.7
+
+taskset:
+taskset from util-linux 2.41.3
+
+htop:
+htop 3.4.1
+
+logical CPUs:
+24

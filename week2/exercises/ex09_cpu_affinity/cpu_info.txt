@@ -1,0 +1,10 @@
+===== nproc =====
+24
+
+===== lscpu =====
+CPU(s):                                  24
+On-line CPU(s) list:                     0-23
+Model name:                              Intel(R) Core(TM) i7-14650HX
+Thread(s) per core:                      2
+Core(s) per socket:                      12
+Socket(s):                               1

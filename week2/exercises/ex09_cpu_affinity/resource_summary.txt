@@ -1,0 +1,12 @@
+CPU Affinity Resource Summary
+=============================
+
+Three stress workers created.
+Allowed CPUs: 0,2
+
+Process snapshot:
+    PID    PPID PSR %CPU COMMAND
+  14588   14334   2  0.0 stress
+  14591   14588   0 57.3 stress
+  14592   14588   2 53.5 stress
+  14594   14588   0 88.8 stress

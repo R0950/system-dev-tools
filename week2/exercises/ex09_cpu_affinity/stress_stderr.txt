@@ -1,0 +1,7 @@
+stress: FAIL: [14588] (425) <-- worker 14592 got signal 15
+stress: WARN: [14588] (427) now reaping child worker processes
+stress: FAIL: [14588] (425) <-- worker 14591 got signal 15
+stress: WARN: [14588] (427) now reaping child worker processes
+stress: FAIL: [14588] (425) <-- worker 14594 got signal 15
+stress: WARN: [14588] (427) now reaping child worker processes
+stress: FAIL: [14588] (461) failed run completed in 16s

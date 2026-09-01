@@ -1,0 +1,24 @@
+===== Start workload =====
+PASS: stress running
+
+===== Worker count =====
+workers=3
+PASS: three CPU workers created
+
+===== Affinity =====
+PID=15032 affinity=0,2
+PID=15034 affinity=0,2
+PID=15035 affinity=0,2
+PID=15036 affinity=0,2
+PASS: all processes restricted correctly
+
+===== CPU location =====
+PID=15034 CPU=2
+PID=15035 CPU=0
+PID=15036 CPU=2
+PASS: workers observed only on allowed CPUs
+
+===== Cleanup =====
+PASS: stress workload stopped
+
+All CPU affinity tests passed.
