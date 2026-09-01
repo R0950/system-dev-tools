@@ -1,0 +1,2 @@
+Before free: numbers[2] = 30
+After free: numbers[2] = 273891639

@@ -1,0 +1,47 @@
+Exercise 05: Memory Debugging with AddressSanitizer
+
+Goal:
+Use AddressSanitizer to detect and diagnose a heap-use-after-free memory bug.
+
+Bug:
+The program allocates an integer array with malloc, frees the allocated
+memory, and then incorrectly accesses the freed memory.
+
+Normal compilation:
+gcc -Wall -Wextra -Wpedantic -g -O0 uaf.c -o uaf_normal
+
+AddressSanitizer compilation:
+gcc -Wall -Wextra -Wpedantic -g -O0 \
+    -fsanitize=address \
+    -fno-omit-frame-pointer \
+    uaf.c -o uaf_asan
+
+Observations:
+1. Accessing dynamically allocated memory after free is undefined behavior.
+2. A normal execution may not clearly explain the memory error.
+3. AddressSanitizer instruments the program during compilation.
+4. Running the instrumented program reports heap-use-after-free.
+5. The sanitizer report identifies where the invalid access occurred.
+6. The report also identifies where the memory was allocated and freed.
+7. The buggy program terminates with a non-zero status under AddressSanitizer.
+8. The corrected program reads the required value before free.
+9. The corrected program exits normally without an AddressSanitizer error.
+
+Key compiler options:
+-g
+    Include debugging information.
+
+-O0
+    Disable optimization to make debugging easier.
+
+-fsanitize=address
+    Enable AddressSanitizer instrumentation.
+
+-fno-omit-frame-pointer
+    Preserve frame pointers to improve stack traces.
+
+Conclusion:
+AddressSanitizer provides runtime instrumentation for detecting memory
+safety errors such as use-after-free, buffer overflows and invalid memory
+accesses. It provides substantially more diagnostic information than
+running the faulty program normally.

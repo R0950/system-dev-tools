@@ -1,0 +1,24 @@
+===== Compile buggy program =====
+uaf.c: In function ‘main’:
+uaf.c:26:52: warning: pointer ‘numbers’ used after ‘free’ [-Wuse-after-free]
+   26 |     printf("After free: numbers[2] = %d\n", numbers[2]);
+      |                                                    ^
+uaf.c:20:5: note: call to ‘free’ here
+   20 |     free(numbers);
+      |     ^~~~~~~~~~~~~
+
+===== Run buggy program =====
+buggy exit code = 1
+PASS: heap-use-after-free detected
+PASS: buggy program returned a non-zero status
+
+===== Compile fixed program =====
+
+===== Run fixed program =====
+Saved value = 30
+fixed exit code = 0
+PASS: fixed program returned zero
+PASS: fixed program has no AddressSanitizer error
+PASS: fixed program produced the expected result
+
+All AddressSanitizer tests passed.

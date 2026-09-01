@@ -1,0 +1,4 @@
+==7035==ERROR: AddressSanitizer: heap-use-after-free on address 0x7348f9de0018 at pc 0x566b60abc4aa bp 0x7ffd06f37fb0 sp 0x7ffd06f37fa0
+freed by thread T0 here:
+previously allocated by thread T0 here:
+SUMMARY: AddressSanitizer: heap-use-after-free /home/jk/system-dev-tools/week2/exercises/ex05_address_sanitizer/uaf.c:26 in main
