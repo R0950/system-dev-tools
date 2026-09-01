@@ -1,0 +1,66 @@
+Exercise 08: Finding the Process Using a Network Port
+
+Source:
+Missing Semester 2026
+Debugging and Profiling - Profiling Exercise 5
+
+Goal:
+Start a local HTTP server on TCP port 4444, identify the process owning
+the port with ss, terminate the discovered process and verify that the
+port is released.
+
+Server command:
+
+python3 -m http.server 4444
+
+Port inspection command:
+
+ss -tlnp | grep 4444
+
+Meaning of ss options:
+
+-t
+Display TCP sockets.
+
+-l
+Display listening sockets.
+
+-n
+Display numerical addresses and ports.
+
+-p
+Display process information.
+
+Procedure:
+
+1. A Python HTTP server was started on TCP port 4444.
+
+2. curl verified that the server was reachable.
+
+3. ss -tlnp located the listening socket.
+
+4. The process PID was extracted automatically from ss output.
+
+5. The PID discovered by ss was compared with the PID returned when the
+   server was started.
+
+6. ps and /proc/PID/cmdline were used to inspect the process.
+
+7. The process was terminated using kill and the PID discovered from ss.
+
+8. ss was executed again to confirm that TCP port 4444 was released.
+
+9. curl was executed after termination to verify that the HTTP service was
+   no longer reachable.
+
+Key concept:
+
+A network error such as "Address already in use" often means another
+process is already listening on the requested port. Socket inspection tools
+such as ss can identify which process owns that listening socket.
+
+Conclusion:
+
+ss provides a direct way to connect network state with process state.
+It is useful for diagnosing port conflicts, local services and server
+startup failures.

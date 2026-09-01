@@ -1,0 +1,51 @@
+Exercise 08 important commands
+
+Start a local web server:
+
+python3 -m http.server 4444
+
+
+Inspect listening TCP sockets:
+
+ss -tlnp
+
+
+Find port 4444:
+
+ss -tlnp | grep 4444
+
+
+Options:
+
+-t
+Show TCP sockets.
+
+-l
+Show listening sockets.
+
+-n
+Do not resolve service names.
+Display numerical addresses and ports.
+
+-p
+Show the process using each socket.
+
+
+Typical output contains:
+
+LISTEN ... 0.0.0.0:4444 ... users:(("python3",pid=1234,fd=3))
+
+
+Terminate the process:
+
+kill PID
+
+
+Check whether a process still exists:
+
+kill -0 PID
+
+
+Wait for a child process:
+
+wait PID

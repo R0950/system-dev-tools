@@ -1,0 +1,25 @@
+===== Start server =====
+server PID = 12091
+
+===== Check process =====
+PASS: server process running
+
+===== Check HTTP =====
+PASS: HTTP request succeeded
+
+===== Find port with ss =====
+LISTEN 0      5             0.0.0.0:4444      0.0.0.0:*    users:(("python3",pid=12091,fd=3))
+PASS: listening port found
+
+===== Extract PID =====
+server PID = 12091
+ss PID     = 12091
+PASS: ss identified correct process
+
+===== Terminate discovered process =====
+PASS: process terminated
+
+===== Verify released port =====
+PASS: port released
+
+All port debugging tests passed.
