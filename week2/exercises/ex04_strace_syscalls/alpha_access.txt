@@ -1,0 +1,3 @@
+5241  execve("/usr/bin/cat", ["cat", "demo/alpha.txt"], 0x5e888cdc4c00 /* 26 vars */) = 0
+5241  statx(AT_FDCWD, "demo/alpha.txt", AT_STATX_SYNC_AS_STAT, STATX_ALL, {stx_mask=STATX_ALL|STATX_MNT_ID, stx_attributes=0, stx_mode=S_IFREG|0644, stx_size=17, ...}) = 0
+5241  openat(AT_FDCWD, "demo/alpha.txt", O_RDONLY|O_CLOEXEC) = 3

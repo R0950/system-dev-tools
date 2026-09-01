@@ -1,0 +1,4 @@
+total 12
+-rw-r--r-- 1 jk jk 17 Sep  1 21:31 alpha.txt
+-rw-r--r-- 1 jk jk 13 Sep  1 21:31 beta.txt
+-rwxr-xr-x 1 jk jk 68 Sep  1 21:31 run_demo.sh

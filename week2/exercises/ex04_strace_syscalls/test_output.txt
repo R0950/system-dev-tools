@@ -1,0 +1,82 @@
+===== Normal ls =====
+total 12
+-rw-r--r-- 1 jk jk 17 Sep  1 21:31 alpha.txt
+-rw-r--r-- 1 jk jk 13 Sep  1 21:31 beta.txt
+-rwxr-xr-x 1 jk jk 68 Sep  1 21:31 run_demo.sh
+
+===== Full strace =====
+trace lines:
+275 trace_all.txt
+
+===== File related calls =====
+execve("/usr/bin/ls", ["ls", "-l", "demo"], 0x7ffe56e4d640 /* 26 vars */) = 0
+access("/etc/ld.so.preload", R_OK)      = -1 ENOENT (No such file or directory)
+openat(AT_FDCWD, "/etc/ld.so.cache", O_RDONLY|O_CLOEXEC) = 3
+openat(AT_FDCWD, "/usr/lib/x86_64-linux-gnu/libselinux.so.1", O_RDONLY|O_CLOEXEC) = 3
+openat(AT_FDCWD, "/usr/lib/x86_64-linux-gnu/libgcc_s.so.1", O_RDONLY|O_CLOEXEC) = 3
+openat(AT_FDCWD, "/usr/lib/x86_64-linux-gnu/libm.so.6", O_RDONLY|O_CLOEXEC) = 3
+openat(AT_FDCWD, "/usr/lib/x86_64-linux-gnu/libc.so.6", O_RDONLY|O_CLOEXEC) = 3
+openat(AT_FDCWD, "/usr/lib/x86_64-linux-gnu/libpcre2-8.so.0", O_RDONLY|O_CLOEXEC) = 3
+statfs("/sys/fs/selinux", {f_type=SYSFS_MAGIC, f_bsize=4096, f_blocks=0, f_bfree=0, f_bavail=0, f_files=0, f_ffree=0, f_fsid={val=[0x83d3f8ff, 0x2effc2e6]}, f_namelen=255, f_frsize=4096, f_flags=ST_VALID|ST_NOSUID|ST_NODEV|ST_NOEXEC|ST_NOATIME}) = 0
+statfs("/selinux", 0x7ffce4883660)      = -1 ENOENT (No such file or directory)
+
+===== openat calls =====
+openat(AT_FDCWD, "/etc/ld.so.cache", O_RDONLY|O_CLOEXEC) = 3
+openat(AT_FDCWD, "/usr/lib/x86_64-linux-gnu/libselinux.so.1", O_RDONLY|O_CLOEXEC) = 3
+openat(AT_FDCWD, "/usr/lib/x86_64-linux-gnu/libgcc_s.so.1", O_RDONLY|O_CLOEXEC) = 3
+openat(AT_FDCWD, "/usr/lib/x86_64-linux-gnu/libm.so.6", O_RDONLY|O_CLOEXEC) = 3
+openat(AT_FDCWD, "/usr/lib/x86_64-linux-gnu/libc.so.6", O_RDONLY|O_CLOEXEC) = 3
+openat(AT_FDCWD, "/usr/lib/x86_64-linux-gnu/libpcre2-8.so.0", O_RDONLY|O_CLOEXEC) = 3
+openat(AT_FDCWD, "/proc/filesystems", O_RDONLY|O_CLOEXEC) = 3
+openat(AT_FDCWD, "/proc/mounts", O_RDONLY|O_CLOEXEC) = 3
+openat(AT_FDCWD, "/proc/self/maps", O_RDONLY|O_CLOEXEC) = 3
+openat(AT_FDCWD, "/usr/share/coreutils/locales/uucore/en-US.ftl", O_RDONLY|O_CLOEXEC) = 3
+
+===== System call statistics =====
+% time     seconds  usecs/call     calls    errors syscall
+------ ----------- ----------- --------- --------- ------------------
+ 19.06    0.000381          11        34           getdents64
+ 13.01    0.000260           8        32         1 openat
+ 12.31    0.000246           7        35           close
+ 11.26    0.000225           9        24           read
+  9.80    0.000196           6        30           fstat
+  5.05    0.000101          10        10           statx
+  3.85    0.000077           8         9           rt_sigaction
+  3.50    0.000070          10         7         5 ioctl
+  2.70    0.000054           9         6           brk
+  2.45    0.000049           9         5           lseek
+  2.10    0.000042          14         3           fcntl
+  2.00    0.000040           6         6         3 listxattr
+  1.95    0.000039           9         4         4 connect
+  1.55    0.000031           7         4           socket
+  1.50    0.000030           7         4           newfstatat
+  1.30    0.000026           8         3           sigaltstack
+  0.90    0.000018           9         2           munmap
+  0.60    0.000012           1         8           mprotect
+  0.60    0.000012          12         1           readlink
+  0.60    0.000012           6         2         1 statfs
+  0.55    0.000011           0        27           mmap
+  0.50    0.000010          10         1           write
+  0.50    0.000010          10         1           poll
+  0.50    0.000010           5         2         2 access
+  0.50    0.000010          10         1           sched_getaffinity
+  0.45    0.000009           9         1           prctl
+  0.45    0.000009           9         1           gettid
+  0.45    0.000009           4         2           prlimit64
+  0.00    0.000000           0         2           pread64
+  0.00    0.000000           0         1           execve
+  0.00    0.000000           0         1           arch_prctl
+  0.00    0.000000           0         1           set_tid_address
+  0.00    0.000000           0         1           set_robust_list
+  0.00    0.000000           0         1           getrandom
+  0.00    0.000000           0         1           rseq
+------ ----------- ----------- --------- --------- ------------------
+100.00    0.001999           7       273        16 total
+
+===== Follow child processes =====
+PASS: alpha.txt access detected
+
+===== Missing file =====
+PASS: ENOENT detected
+
+All strace tests passed.

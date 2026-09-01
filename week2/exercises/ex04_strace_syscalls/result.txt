@@ -1,0 +1,30 @@
+Exercise 04: System Call Tracing with strace
+
+Goal:
+Use strace to inspect Linux system calls and diagnose program behavior.
+
+Main commands:
+strace ls -l
+strace -e trace=file ls -l
+strace -e trace=openat ls -l
+strace -T ls -l
+strace -c ls -l
+strace -f ./demo/run_demo.sh
+
+Observations:
+1. A simple command such as ls performs many system calls.
+2. openat is used to open files and directories.
+3. fstat and newfstatat obtain file metadata.
+4. mmap maps files or memory into a process address space.
+5. close closes file descriptors.
+6. write sends data to a file descriptor.
+7. strace -e filters selected system calls.
+8. strace -T shows the execution time of individual system calls.
+9. strace -c summarizes system call counts and execution time.
+10. strace -f follows child processes.
+11. When a requested file does not exist, openat returns ENOENT.
+
+Conclusion:
+strace is a useful debugging and profiling tool for observing interactions
+between user programs and the Linux kernel. It can reveal file access,
+failed system calls, child process behavior and low-level runtime errors.
