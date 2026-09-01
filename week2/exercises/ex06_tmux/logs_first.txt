@@ -1,0 +1,12 @@
+echo "LOG_WINDOW_READY"; echo "This is the logs window"; pwd
+jk@JK:~/system-dev-tools/week2/exercises/ex06_tmux$ echo "LOG_WINDOW_READY"; ech
+o "This is the logs window"; pwd
+LOG_WINDOW_READY
+This is the logs window
+/home/jk/system-dev-tools/week2/exercises/ex06_tmux
+jk@JK:~/system-dev-tools/week2/exercises/ex06_tmux$
+
+
+
+
+

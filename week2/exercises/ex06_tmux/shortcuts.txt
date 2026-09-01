@@ -1,0 +1,42 @@
+Missing Semester tmux shortcuts
+
+Ctrl-b d
+Detach current session.
+
+Ctrl-b c
+Create a new window.
+
+Ctrl-b n
+Move to next window.
+
+Ctrl-b p
+Move to previous window.
+
+Ctrl-b %
+Split current pane vertically.
+
+Ctrl-b "
+Split current pane horizontally.
+
+Ctrl-b + arrow key
+Move between panes.
+
+Ctrl-b z
+Zoom/unzoom current pane.
+
+Ctrl-b [
+Enter scroll/copy mode.
+
+Useful shell commands:
+
+tmux new -s NAME
+Create a named session.
+
+tmux ls
+List sessions.
+
+tmux attach -t NAME
+Attach to an existing session.
+
+tmux kill-session -t NAME
+Terminate a session.

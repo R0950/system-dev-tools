@@ -1,0 +1,24 @@
+echo "RIGHT_PANE_READY"; echo "Task: mo
+nitor"; echo "Shell=$SHELL"; date
+jk@JK:~/system-dev-tools/week2/exercise
+s/ex06_tmux$ echo "RIGHT_PANE_READY"; e
+cho "Task: monitor"; echo "Shell=$SHELL
+"; date
+RIGHT_PANE_READY
+Task: monitor
+Shell=/bin/bash
+Tue Sep  1 21:53:04 CST 2026
+jk@JK:~/system-dev-tools/week2/exercise
+s/ex06_tmux$
+
+
+
+
+
+
+
+
+
+
+
+

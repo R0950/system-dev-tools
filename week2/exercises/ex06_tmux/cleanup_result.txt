@@ -1,0 +1,1 @@
+PASS: week2demo session successfully removed

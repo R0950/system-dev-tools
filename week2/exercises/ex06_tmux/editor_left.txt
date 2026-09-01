@@ -1,0 +1,24 @@
+echo "LEFT_PANE_READY"; echo "Task: edit
+or"; echo "PWD=$PWD"; uname -s
+jk@JK:~/system-dev-tools/week2/exercises
+/ex06_tmux$ echo "LEFT_PANE_READY"; echo
+ "Task: editor"; echo "PWD=$PWD"; uname
+-s
+LEFT_PANE_READY
+Task: editor
+PWD=/home/jk/system-dev-tools/week2/exer
+cises/ex06_tmux
+Linux
+jk@JK:~/system-dev-tools/week2/exercises
+/ex06_tmux$
+
+
+
+
+
+
+
+
+
+
+

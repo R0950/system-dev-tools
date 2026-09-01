@@ -1,0 +1,67 @@
+Exercise 06: Terminal Multiplexing with tmux
+
+Source:
+Missing Semester 2026 - Command-line Environment - Terminal Multiplexers.
+
+Goal:
+Learn the tmux session, window, pane and detached-session model.
+
+Experiment:
+
+1. Created a detached tmux session named week2demo.
+
+2. Created an editor window containing two panes.
+
+3. Sent independent shell commands to the two editor panes.
+
+4. Created a second window named logs.
+
+5. Split the logs window into two panes.
+
+6. Used tmux list-sessions, list-windows and list-panes to inspect the
+   hierarchy.
+
+7. Used tmux capture-pane to collect pane output without attaching to
+   the session.
+
+8. Confirmed that session_attached was zero, meaning the session was
+   running in detached mode.
+
+9. Used a local tmux.conf to demonstrate basic configuration without
+   changing the user's global tmux configuration.
+
+Important hierarchy:
+
+Session
+  -> Window
+       -> Pane
+
+Useful commands:
+
+tmux new -s NAME
+    Start a named session.
+
+tmux ls
+    List sessions.
+
+tmux attach -t NAME
+    Attach to a session.
+
+tmux new-window
+    Create a new window.
+
+tmux split-window
+    Split a window into panes.
+
+tmux list-panes
+    List panes.
+
+tmux kill-session
+    Terminate a session.
+
+Conclusion:
+
+tmux is a terminal multiplexer that allows several shell environments
+to be organized inside one terminal. Sessions may continue running while
+detached, which makes tmux particularly useful for remote development,
+long-running commands and command-line development workflows.

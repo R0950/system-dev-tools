@@ -1,0 +1,38 @@
+===== TEST SESSION =====
+PASS: tmux session exists
+
+===== TEST WINDOW COUNT =====
+window count = 2
+PASS: session contains two windows
+
+===== TEST EDITOR WINDOW =====
+PASS: editor window exists
+
+===== TEST LOGS WINDOW =====
+PASS: logs window exists
+
+===== TEST EDITOR PANES =====
+editor pane count = 2
+PASS: editor contains two panes
+
+===== TEST LOG PANES =====
+logs pane count = 2
+PASS: logs contains two panes
+
+===== TEST LEFT PANE COMMAND =====
+PASS: left pane command executed
+
+===== TEST RIGHT PANE COMMAND =====
+PASS: right pane command executed
+
+===== TEST LOG WINDOW =====
+PASS: first log pane command executed
+
+===== TEST SECOND LOG PANE =====
+PASS: second log pane command executed
+
+===== TEST DETACHED SESSION =====
+attached clients = 0
+PASS: session is detached
+
+All tmux tests passed.

@@ -1,0 +1,7 @@
+===== editor =====
+index=1 id=%0 width=40 height=24 active=0
+index=2 id=%1 width=39 height=24 active=1
+
+===== logs =====
+index=1 id=%2 width=80 height=12 active=0
+index=2 id=%3 width=80 height=11 active=1

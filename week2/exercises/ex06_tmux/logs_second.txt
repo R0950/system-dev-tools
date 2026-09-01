@@ -1,0 +1,11 @@
+echo "SECOND_LOG_PANE_READY"; echo "Process list sample:"; ps -o pid,comm | head
+jk@JK:~/system-dev-tools/week2/exercises/ex06_tmux$ echo "SECOND_LOG_PANE_READY"
+; echo "Process list sample:"; ps -o pid,comm | head
+SECOND_LOG_PANE_READY
+Process list sample:
+    PID COMMAND
+   8426 bash
+   8564 ps
+   8565 head
+jk@JK:~/system-dev-tools/week2/exercises/ex06_tmux$
+
