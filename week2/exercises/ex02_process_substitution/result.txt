@@ -1,0 +1,24 @@
+Exercise 02: Process Substitution
+
+Goal:
+Use Bash process substitution to compare the output of printenv and export.
+
+Main command:
+diff <(printenv | sort) <(export | sort)
+
+Observations:
+1. printenv displays environment variables in NAME=value format.
+2. export displays exported variables using Bash's declare -x format.
+3. <(command) is Bash process substitution.
+4. Bash exposes command output through a file-like path such as /dev/fd/63.
+5. diff can compare two command outputs directly without manually creating
+   temporary files.
+6. diff returns status 1 when the two inputs contain differences.
+
+Simple example:
+diff fruits.txt <(printf "apple\nbanana\ngrape\n")
+
+Conclusion:
+Process substitution allows the output of a command to be used where another
+program expects a filename. It is useful for directly comparing dynamically
+generated command output.
