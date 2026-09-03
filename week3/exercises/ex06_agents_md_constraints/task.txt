@@ -1,0 +1,15 @@
+Implement the TODO functionality in src/calculator.py.
+
+Expected behavior:
+
+clamp(value, minimum, maximum):
+- return minimum when value is below minimum
+- return maximum when value is above maximum
+- otherwise return value
+- raise ValueError when minimum > maximum
+
+mean(values):
+- return the arithmetic mean
+- raise ValueError for an empty list
+
+Follow all repository instructions in AGENTS.md.
