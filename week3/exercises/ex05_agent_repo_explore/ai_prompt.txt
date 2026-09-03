@@ -1,0 +1,25 @@
+Inspect this repository as an unfamiliar codebase.
+
+Do not implement new functionality.
+
+Constraints:
+1. Do not modify run.py.
+2. Do not modify test_flow.py.
+3. Do not modify anything under src/.
+4. You may only create or update agent_report.md.
+
+Determine:
+1. The actual program entry point.
+2. The call chain starting from the entry point.
+3. The responsibility of every module under src/miniapp.
+4. The complete data flow for --numbers "1,2,3,4".
+5. Where invalid input such as "1,,2" is detected.
+6. Which exception/exit behavior is produced for invalid input.
+
+Before writing the report, run:
+
+PYTHONPATH=src python3 test_flow.py
+PYTHONPATH=src python3 run.py --numbers "1,2,3,4"
+
+Write your conclusions into agent_report.md.
+Include the commands you used for verification.

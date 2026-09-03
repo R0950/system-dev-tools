@@ -1,0 +1,76 @@
+===== ENTRY POINT =====
+from miniapp.cli import main
+
+
+if __name__ == "__main__":
+    main()
+
+===== IMPORT RELATIONSHIPS =====
+src/miniapp/service.py:1:from .io import parse_numbers
+src/miniapp/service.py:2:from .stats import summarize
+src/miniapp/cli.py:4:from .service import analyze_text
+
+===== NORMAL RUN =====
+{"average": 2.5, "count": 4, "max": 4.0, "min": 1.0}
+
+===== TEST =====
+PASS: repository behavior verified
+
+===== CLI SOURCE =====
+import argparse
+import json
+
+from .service import analyze_text
+
+
+def main():
+    parser = argparse.ArgumentParser()
+    parser.add_argument("--numbers", required=True)
+
+    args = parser.parse_args()
+
+    try:
+        result = analyze_text(args.numbers)
+    except ValueError as exc:
+        parser.error(str(exc))
+
+    print(json.dumps(result, sort_keys=True))
+
+===== SERVICE SOURCE =====
+from .io import parse_numbers
+from .stats import summarize
+
+
+def analyze_text(text):
+    values = parse_numbers(text)
+    return summarize(values)
+
+===== IO SOURCE =====
+def parse_numbers(text):
+    """Convert comma-separated text into a list of floats."""
+    items = [part.strip() for part in text.split(",")]
+
+    if not items or any(item == "" for item in items):
+        raise ValueError("numbers must be a comma-separated list")
+
+    return [float(item) for item in items]
+
+===== STATS SOURCE =====
+def summarize(values):
+    """Return basic statistics for a non-empty sequence."""
+    if not values:
+        raise ValueError("values must not be empty")
+
+    return {
+        "count": len(values),
+        "min": min(values),
+        "max": max(values),
+        "average": round(sum(values) / len(values), 2),
+    }
+
+===== INVALID INPUT =====
+exit_code=2
+
+stderr:
+usage: run.py [-h] --numbers NUMBERS
+run.py: error: numbers must be a comma-separated list
