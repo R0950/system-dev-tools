@@ -1,0 +1,53 @@
+===== ENVIRONMENT =====
+Python 3.14.4
+torch = 2.14.0+cpu
+
+===== AUTOGRAD DEMO =====
+===== FUNCTION =====
+f(x, y) = x^2 + 3xy + y^2
+x = 2.0
+y = -1.0
+
+===== FUNCTION VALUE =====
+f(2, -1) = -1.0
+
+===== MANUAL GRADIENT =====
+df/dx = 1.0
+df/dy = 4.0
+
+===== AUTOGRAD GRADIENT =====
+x.grad = 1.0
+y.grad = 4.0
+
+===== GRADIENT CHECK =====
+x gradient matches = True
+y gradient matches = True
+
+===== GRADIENT ACCUMULATION =====
+after first backward  = 1.0
+after second backward = 2.0
+
+===== VECTOR GRADIENT =====
+x = [1, 2, 3]
+loss = sum(x^2)
+gradient = tensor([2., 4., 6.], dtype=torch.float64)
+
+===== TESTS =====
+test_autograd_matches_manual_gradient (test_autograd.AutogradTests.test_autograd_matches_manual_gradient) ... ok
+test_function_value (test_autograd.AutogradTests.test_function_value) ... ok
+test_gradient_accumulation (test_autograd.AutogradTests.test_gradient_accumulation) ... ok
+test_manual_gradient (test_autograd.AutogradTests.test_manual_gradient) ... ok
+test_vector_gradient (test_autograd.AutogradTests.test_vector_gradient) ... ok
+
+----------------------------------------------------------------------
+Ran 5 tests in 0.003s
+
+OK
+
+===== COMPUTATION GRAPH CHECK =====
+x.requires_grad = True
+y.requires_grad = True
+z.requires_grad = True
+z.grad_fn = AddBackward0
+x.grad = 1.0
+y.grad = 4.0
