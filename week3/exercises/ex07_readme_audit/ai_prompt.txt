@@ -1,0 +1,28 @@
+Audit README.md as documentation for this repository.
+
+Before writing the audit:
+
+1. Read README.md.
+2. Read audit_checklist.md.
+3. Inspect app.py and test_app.py.
+4. Run:
+
+python3 -m unittest -v test_app.py
+python3 app.py --help
+
+Do not modify README.md.
+Do not modify app.py.
+Do not modify test_app.py.
+Do not modify audit_checklist.md.
+
+You may only create or update ai_audit.md.
+
+For every criterion in audit_checklist.md, give one of:
+
+PASS
+PARTIAL
+MISSING
+
+Explain the reason using evidence from README.md and the actual program.
+
+Finally identify the three most important README improvements.
