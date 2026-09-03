@@ -1,0 +1,44 @@
+Investigate the bug described in bug_report.md.
+
+Read:
+
+- report.py
+- test_report.py
+- bug_report.md
+
+First reproduce the failing behavior by running:
+
+python3 -m unittest -v test_report.py
+
+Do not modify:
+
+- report.py
+- test_report.py
+- bug_report.md
+
+Your task is NOT to fix the production code.
+
+Create only:
+
+1. minimal_reproducer.py
+2. ai_analysis.md
+
+Requirements for minimal_reproducer.py:
+
+- It must reproduce the same underlying bug.
+- It must not import report.py.
+- It must use only the Python standard library.
+- Remove all unrelated report formatting and record-processing logic.
+- Keep the reproduction as small and understandable as practical.
+- Running `python3 minimal_reproducer.py` must visibly demonstrate the wrong
+  behavior.
+- Include an assertion so the script exits non-zero while the bug is present.
+
+In ai_analysis.md explain:
+
+1. What the root cause is.
+2. Why the bug persists across function calls.
+3. Which parts of the original project were irrelevant to reproducing it.
+4. Why minimal_reproducer.py demonstrates the same underlying defect.
+5. How the production bug should eventually be fixed, but do not modify
+   report.py yet.

@@ -1,0 +1,55 @@
+===== ORIGINAL BUG =====
+test_clean_record_has_no_warning (test_report.ReportTests.test_clean_record_has_no_warning) ... ok
+test_invalid_record_produces_warning (test_report.ReportTests.test_invalid_record_produces_warning) ... ok
+test_validate_records_directly (test_report.ReportTests.test_validate_records_directly) ... FAIL
+
+======================================================================
+FAIL: test_validate_records_directly (test_report.ReportTests.test_validate_records_directly)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/jk/system-dev-tools/week3/exercises/ex08_minimal_reproducer/test_report.py", line 29, in test_validate_records_directly
+    self.assertEqual(
+    ~~~~~~~~~~~~~~~~^
+        validate_records([
+        ^^^^^^^^^^^^^^^^^^
+    ...<5 lines>...
+        [],
+        ^^^
+    )
+    ^
+AssertionError: Lists differ: ['record 1: missing name'] != []
+
+First list contains 1 additional elements.
+First extra element 0:
+'record 1: missing name'
+
+- ['record 1: missing name']
++ []
+
+----------------------------------------------------------------------
+Ran 3 tests in 0.001s
+
+FAILED (failures=1)
+
+original_exit_code=1
+
+===== MINIMAL REPRODUCER =====
+1st call (invalid) -> ['warning']
+2nd call (clean)   -> ['warning']
+expected           -> []
+Traceback (most recent call last):
+  File "/home/jk/system-dev-tools/week3/exercises/ex08_minimal_reproducer/minimal_reproducer.py", line 23, in <module>
+    assert second == [], f"second call returned {second!r}, expected []"
+           ^^^^^^^^^^^^
+AssertionError: second call returned ['warning'], expected []
+
+minimal_exit_code=1
+
+===== SHARED DEFAULT OBJECT =====
+first = ['record 1: missing name']
+second = ['record 1: missing name']
+same_object = True
+same_as_default = True
+
+===== SOURCE INTEGRITY =====
+PASS: original bug files unchanged
