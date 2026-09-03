@@ -1,0 +1,5 @@
+Initial version: 1.2.3
+Bug fix       -> 1.2.4
+New feature   -> 1.3.0
+Breaking API  -> 2.0.0
+PASS: all semantic version tests passed
