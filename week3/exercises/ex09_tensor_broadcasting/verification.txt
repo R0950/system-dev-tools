@@ -1,0 +1,40 @@
+===== ENVIRONMENT =====
+Python 3.14.4
+torch = 2.14.0+cpu
+numpy = 2.5.2
+
+===== DEMO =====
+===== ORIGINAL MATRIX =====
+tensor([[1., 2., 3.],
+        [4., 5., 6.]])
+shape = (2, 3)
+
+===== MATRIX + ROW =====
+tensor([[11., 22., 33.],
+        [14., 25., 36.]])
+shape = (2, 3)
+
+===== MATRIX * FACTORS =====
+tensor([[ 2.,  4.,  6.],
+        [12., 15., 18.]])
+shape = (2, 3)
+
+===== BROADCAST SHAPES =====
+(2, 3) + (3,) -> (2, 3)
+(2, 3) * (2, 1) -> (2, 3)
+
+===== INCOMPATIBLE =====
+caught RuntimeError
+The size of tensor a (3) must match the size of tensor b (2) at non-singleton dimension 1
+
+===== TEST =====
+test_add_row_vector (test_broadcasting.BroadcastingTests.test_add_row_vector) ... ok
+test_column_shape (test_broadcasting.BroadcastingTests.test_column_shape) ... ok
+test_incompatible (test_broadcasting.BroadcastingTests.test_incompatible) ... ok
+test_row_shape (test_broadcasting.BroadcastingTests.test_row_shape) ... ok
+test_scale_rows (test_broadcasting.BroadcastingTests.test_scale_rows) ... ok
+
+----------------------------------------------------------------------
+Ran 5 tests in 0.154s
+
+OK
