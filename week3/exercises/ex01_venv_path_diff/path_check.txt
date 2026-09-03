@@ -1,0 +1,37 @@
+===== BEFORE VENV =====
+python3 path:
+/usr/bin/python3
+
+pip3 path:
+pip3 not found
+
+python version:
+Python 3.14.4
+
+PATH:
+/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/usr/lib/wsl/lib:/mnt/c/Program Files (x86)/VMware/VMware Workstation/bin/:/mnt/c/Windows/system32:/mnt/c/Windows:/mnt/c/Windows/System32/Wbem:/mnt/c/Windows/System32/WindowsPowerShell/v1.0/:/mnt/c/Windows/System32/OpenSSH/:/mnt/c/Program Files (x86)/NVIDIA Corporation/PhysX/Common:/mnt/c/Program Files/dotnet/:/mnt/c/Program Files/NVIDIA Corporation/NVIDIA App/NvDLISR:/mnt/c/额外安装的/Bandizip/:/mnt/c/m:/mnt/c/github/Git/cmd:/mnt/c/Minggw/bin:/mnt/c/Program Files/Microsoft SQL Server/150/Tools/Binn/:/mnt/c/Program Files (x86)/Windows Kits/10/Windows Performance Toolkit/:/mnt/c/Program Files/nodejs/:/mnt/c/Program Files/CMake/bin:/mnt/c/Users/32109/AppData/Local/Programs/Python/Python314/Scripts/:/mnt/c/Users/32109/AppData/Local/Programs/Python/Python314/:/mnt/c/额外安装的/cursor/resources/app/codeBin:/mnt/c/Users/32109/AppData/Local/Programs/Python/Python313/Scripts/:/mnt/c/Users/32109/AppData/Local/Programs/Python/Python313/:/mnt/c/Users/32109/AppData/Local/Microsoft/WindowsApps:/mnt/c/Users/32109/AppData/Local/JetBrains/Toolbox/scripts:/mnt/c/VScode/Microsoft VS Code/bin:/mnt/c/Users/32109/AppData/Local/GitHubDesktop/bin:/mnt/c/Users/32109/.dotnet/tools:/mnt/c/idea/IntelliJ IDEA 2025.2/bin:/mnt/c/text/MinGW/bin:/mnt/c/text/w64devkit/bin:/mnt/c/Library/SDL2:/mnt/c/Library/SDL2/lib/x64:/mnt/c/Users/32109/AppData/Roaming/npm:/mnt/c/msys64/ucrt64/bin:/snap/bin
+
+
+===== AFTER VENV ACTIVATION =====
+python path:
+/home/jk/system-dev-tools/week3/exercises/ex01_venv_path_diff/.venv/bin/python
+
+pip path:
+/home/jk/system-dev-tools/week3/exercises/ex01_venv_path_diff/.venv/bin/pip
+
+python version:
+Python 3.14.4
+
+VIRTUAL_ENV:
+/home/jk/system-dev-tools/week3/exercises/ex01_venv_path_diff/.venv
+
+PATH:
+/home/jk/system-dev-tools/week3/exercises/ex01_venv_path_diff/.venv/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/usr/lib/wsl/lib:/mnt/c/Program Files (x86)/VMware/VMware Workstation/bin/:/mnt/c/Windows/system32:/mnt/c/Windows:/mnt/c/Windows/System32/Wbem:/mnt/c/Windows/System32/WindowsPowerShell/v1.0/:/mnt/c/Windows/System32/OpenSSH/:/mnt/c/Program Files (x86)/NVIDIA Corporation/PhysX/Common:/mnt/c/Program Files/dotnet/:/mnt/c/Program Files/NVIDIA Corporation/NVIDIA App/NvDLISR:/mnt/c/额外安装的/Bandizip/:/mnt/c/m:/mnt/c/github/Git/cmd:/mnt/c/Minggw/bin:/mnt/c/Program Files/Microsoft SQL Server/150/Tools/Binn/:/mnt/c/Program Files (x86)/Windows Kits/10/Windows Performance Toolkit/:/mnt/c/Program Files/nodejs/:/mnt/c/Program Files/CMake/bin:/mnt/c/Users/32109/AppData/Local/Programs/Python/Python314/Scripts/:/mnt/c/Users/32109/AppData/Local/Programs/Python/Python314/:/mnt/c/额外安装的/cursor/resources/app/codeBin:/mnt/c/Users/32109/AppData/Local/Programs/Python/Python313/Scripts/:/mnt/c/Users/32109/AppData/Local/Programs/Python/Python313/:/mnt/c/Users/32109/AppData/Local/Microsoft/WindowsApps:/mnt/c/Users/32109/AppData/Local/JetBrains/Toolbox/scripts:/mnt/c/VScode/Microsoft VS Code/bin:/mnt/c/Users/32109/AppData/Local/GitHubDesktop/bin:/mnt/c/Users/32109/.dotnet/tools:/mnt/c/idea/IntelliJ IDEA 2025.2/bin:/mnt/c/text/MinGW/bin:/mnt/c/text/w64devkit/bin:/mnt/c/Library/SDL2:/mnt/c/Library/SDL2/lib/x64:/mnt/c/Users/32109/AppData/Roaming/npm:/mnt/c/msys64/ucrt64/bin:/snap/bin
+
+
+===== AFTER DEACTIVATE =====
+python3 path:
+/usr/bin/python3
+
+PATH:
+/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/usr/lib/wsl/lib:/mnt/c/Program Files (x86)/VMware/VMware Workstation/bin/:/mnt/c/Windows/system32:/mnt/c/Windows:/mnt/c/Windows/System32/Wbem:/mnt/c/Windows/System32/WindowsPowerShell/v1.0/:/mnt/c/Windows/System32/OpenSSH/:/mnt/c/Program Files (x86)/NVIDIA Corporation/PhysX/Common:/mnt/c/Program Files/dotnet/:/mnt/c/Program Files/NVIDIA Corporation/NVIDIA App/NvDLISR:/mnt/c/额外安装的/Bandizip/:/mnt/c/m:/mnt/c/github/Git/cmd:/mnt/c/Minggw/bin:/mnt/c/Program Files/Microsoft SQL Server/150/Tools/Binn/:/mnt/c/Program Files (x86)/Windows Kits/10/Windows Performance Toolkit/:/mnt/c/Program Files/nodejs/:/mnt/c/Program Files/CMake/bin:/mnt/c/Users/32109/AppData/Local/Programs/Python/Python314/Scripts/:/mnt/c/Users/32109/AppData/Local/Programs/Python/Python314/:/mnt/c/额外安装的/cursor/resources/app/codeBin:/mnt/c/Users/32109/AppData/Local/Programs/Python/Python313/Scripts/:/mnt/c/Users/32109/AppData/Local/Programs/Python/Python313/:/mnt/c/Users/32109/AppData/Local/Microsoft/WindowsApps:/mnt/c/Users/32109/AppData/Local/JetBrains/Toolbox/scripts:/mnt/c/VScode/Microsoft VS Code/bin:/mnt/c/Users/32109/AppData/Local/GitHubDesktop/bin:/mnt/c/Users/32109/.dotnet/tools:/mnt/c/idea/IntelliJ IDEA 2025.2/bin:/mnt/c/text/MinGW/bin:/mnt/c/text/w64devkit/bin:/mnt/c/Library/SDL2:/mnt/c/Library/SDL2/lib/x64:/mnt/c/Users/32109/AppData/Roaming/npm:/mnt/c/msys64/ucrt64/bin:/snap/bin
